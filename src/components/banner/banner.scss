@@ -1,0 +1,158 @@
+@import "../../global.scss";
+
+.banner {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: map-get($breakpoint, xlarge)) 
+    {
+        height: 80vh;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 700;
+        color: $blue;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            font-size: 45px;
+        }
+        @media screen and (max-width: map-get($breakpoint, medium)) 
+        {
+            font-size: 40px;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+        color: $mainFontColor;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            font-size: 30px;
+        }
+        @media screen and (max-width: map-get($breakpoint, medium)) 
+        {
+            font-size: 24px;
+        }
+
+        #line {
+            display: block;
+        }
+
+        #green {
+            color: $green;
+            text-decoration: underline;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        margin-top: 20px;
+
+        @media screen and (max-width: map-get($breakpoint, medium)) 
+        {
+            align-items: center;
+            justify-content: center;
+        }
+
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            color: $blue;
+
+            @media screen and (max-width: map-get($breakpoint, medium)) 
+            {
+                font-size: 16px;
+            }
+            @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+            {
+                font-size: 16px;
+            }
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: solid 2px $blue;
+                border-radius: 10px;
+                width: 150px;
+                height: 50px;
+                transition: all .3s ease-in-out;
+                cursor: pointer;
+
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    width: 130px;
+                    height: 40px;
+                }
+                @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+                {
+                    width: 120px;
+                    height: 40px;
+                }
+
+                &:hover {
+                    background-color: $blue;
+                    color: $bgColor;
+                }
+            }
+            #signUpButton {
+                margin-right: 10px;
+                background-color: $blue;
+                color: $bgColor;
+
+                &:hover {
+                    background-color: $bgColor;
+                    color: $blue;
+                }
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 40px;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $secondaryFontColor;
+
+        @media screen and (max-width: map-get($breakpoint, medium)) 
+        {
+            font-size: 14px;
+        }
+        @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+        {
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: $blue;
+        }
+    }
+
+    img {
+        height: 50%;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            height: unset;
+            width: 90%;
+        }
+    }
+}

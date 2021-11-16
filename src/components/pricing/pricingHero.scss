@@ -1,0 +1,147 @@
+@import "../../global.scss";
+
+.pricingHero {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        height: 100%;
+        width: 80em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: 50px;
+            font-weight: 700;
+            color: $mainFontColor;
+            margin-bottom: 20px;
+            margin-top: 80px;
+            text-align: center;
+
+            @media screen and (max-width: map-get($breakpoint, medium)) 
+            {
+                font-size: 28px;
+                margin-bottom: 10px;
+                margin-top: 100px;
+            }
+            @media screen and (max-width: map-get($breakpoint, small)) 
+            {
+                font-size: 24px;
+            }
+            @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+            {
+                font-size: 30px;
+            }
+        }
+
+        .colContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .col {
+                width: 20em;
+                height: 40em;
+                background-color: white;
+                border-top: solid 10px $blue;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+                margin: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h1 {
+                    font-size: 30px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+
+                p {
+                    margin: 10px;
+                    color: $mainFontColor;
+                    font-size: 18px;
+                }
+
+                h2 {
+                    margin: 40px 10px;
+                    color: $mainFontColor;
+                    font-size: 40px;
+                    text-align: center;
+                    font-weight: 500;
+
+                    #bold {
+                        font-weight: 800;
+                    }
+                    #lower {
+                        font-size: 20px;
+                    }
+                }
+
+                ul {
+                    list-style: none;
+                    overflow-x: unset;
+                    margin: 10px;
+
+                    li {
+                       overflow-x: unset;
+                       margin: 10px;
+                       color: $mainFontColor;
+                       font-size: 16px;
+                    }
+                }
+                ul li::before {
+                    content: "\27A4";
+                    font-size: 16px;
+                    color: $blue;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 1.3em;
+            
+                }
+
+                a {
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: $blue;
+                    margin-top: auto;
+                    margin-bottom: 20px;
+
+                    .button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: solid 2px $blue;
+                        border-radius: 10px;
+                        width: 150px;
+                        height: 50px;
+                        transition: all .3s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $blue;
+                            color: $bgColor;
+                        }
+                    }
+                    #signUpButton {
+                        margin-right: 10px;
+                        background-color: $blue;
+                        color: $bgColor;
+    
+                        &:hover {
+                            background-color: $bgColor;
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

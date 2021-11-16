@@ -1,0 +1,141 @@
+@import "./global.scss";
+
+.howItWorks {
+    background-color: $bgColor;
+
+    .guy {
+        position: absolute;
+        z-index: 0;
+        width: 25%;
+        top: 650px;
+        left: 250px;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            display: none;
+        }
+    }
+
+    .circleMedium {
+        z-index: 0;
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        background-color: rgba(255, 255, 255, 0.9);
+        top: 750px;
+        left: 100px;
+        border-radius: 50%;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            display: none;
+        }
+    }
+
+    .circleSmall {
+        z-index: 0;
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        background-color: rgba(255, 255, 255, 0.9);
+        top: 850px;
+        left: 250px;
+        border-radius: 50%;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            display: none;
+        }
+    }
+
+    .bgSquare {
+        z-index: 0;
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        background-color: rgba(255, 255, 255, 0.9);
+        top: 200px;
+        left: 150px;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            display: none;
+        }
+    }
+
+    .bgSquareSmall {
+        z-index: 0;
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+        top: 250px;
+        left: 330px;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            display: none;
+        }
+    }
+    .bgSquareLarge {
+        z-index: 0;
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        background-color: rgba(255, 255, 255, 0.9);
+        top: 700px;
+        left: 700px;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            display: none;
+        }
+    }
+
+    .bgSquareBorder {
+        z-index: 0;
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        border: solid 20px rgba(255, 255, 255, 0.9);
+        top: 360px;
+        left: 40px;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            display: none;
+        }
+    }
+
+    .bgLine1 {
+        z-index: 0;
+        position: absolute;
+        height: 5px;
+        width: 100px;
+        background: rgba(255, 255, 255, 0.9);
+        top: 470px;
+        left: 190px;
+        transform: rotate(-45deg);
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            display: none;
+        }
+    }
+
+    .bgLine2 {
+        z-index: 0;
+        position: absolute;
+        height: 5px;
+        width: 100px;
+        background: rgba(255, 255, 255, 0.9);
+        top: 500px;
+        left: 190px;
+        transform: rotate(-45deg);
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            display: none;
+        }
+    }
+}

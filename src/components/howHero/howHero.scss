@@ -1,0 +1,316 @@
+@import "../../global.scss";
+
+.howHero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: map-get($breakpoint, xlarge)) 
+    {
+        flex-direction: column-reverse;
+    }
+    @media screen and (max-width: map-get($breakpoint, xlarge)) and (orientation: landscape)
+    {
+        flex-direction: row;
+    }
+    @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+    {
+        height: 200vh;
+    }
+    
+    .left {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            width: 100%;
+            height: 40%;
+            align-items: center;
+        }
+        @media screen and (max-width: map-get($breakpoint, xlarge)) and (orientation: landscape)
+        {
+            width: 40%;
+            height: 100%;
+            align-items: flex-end;
+        }
+        @media screen and (max-width: map-get($breakpoint, medium))
+        {
+            height: 50%;
+        }
+
+        .container {
+            width: 60%;
+
+            @media screen and (max-width: map-get($breakpoint, xxxlarge)) 
+            {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 50px;
+                font-weight: 700;
+                color: $mainFontColor;
+                margin-bottom: 20px;
+
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    text-align: center;
+                    font-size: 28px;
+                    margin-bottom: 10px;
+                }
+                @media screen and (max-width: map-get($breakpoint, small)) 
+                {
+                    font-size: 20px;
+                }
+                @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+                {
+                    font-size: 30px;
+                }
+            }
+            
+            p {
+                font-size: 20px;
+                font-weight: 400;
+                color: $mainFontColor;
+                line-height: 30px;
+                margin-bottom: 40px;
+
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    text-align: center;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    line-height: 22px;
+                }
+                @media screen and (max-width: map-get($breakpoint, small)) 
+                {
+                    font-size: 14px;
+                }
+                @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+                {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+            #lowerText {
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: 400;
+                color: $secondaryFontColor;
+
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    font-size: 14px;
+                }
+                @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+                {
+                    font-size: 14px;
+                }
+
+                a {
+                    text-decoration: underline;
+                    color: $blue;
+                }
+            }
+
+            .wrapper {
+                display: flex;
+
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                a {
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: $blue;
+
+                    @media screen and (max-width: map-get($breakpoint, medium)) 
+                    {
+                        font-size: 16px;
+                    }
+                    @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+                    {
+                        font-size: 16px;
+                    }
+
+                    .button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: solid 2px $blue;
+                        border-radius: 10px;
+                        width: 150px;
+                        height: 50px;
+                        transition: all .3s ease-in-out;
+                        cursor: pointer;
+
+                        @media screen and (max-width: map-get($breakpoint, medium)) 
+                        {
+                            width: 130px;
+                            height: 40px;
+                        }
+                        @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+                        {
+                            width: 120px;
+                            height: 40px;
+                        }
+
+                        &:hover {
+                            background-color: $blue;
+                            color: $bgColor;
+                        }
+                    }
+                    #signUpButton {
+                        margin-right: 10px;
+                        background-color: $blue;
+                        color: $bgColor;
+    
+                        &:hover {
+                            background-color: $bgColor;
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            width: 100%;
+            height: 60%;
+        }
+        @media screen and (max-width: map-get($breakpoint, xlarge)) and (orientation: landscape)
+        {
+            width: 60%;
+            height: 100%;
+        } 
+        @media screen and (max-width: map-get($breakpoint, medium))
+        {
+            height: 50%;
+            justify-content: flex-end;
+        }
+
+        svg {
+            width: 90%;
+
+            @media screen and (max-width: map-get($breakpoint, xlarge)) 
+            {
+                width: unset;
+                height: 80%;
+            }
+            @media screen and (max-width: map-get($breakpoint, medium)) 
+            {
+                height: 60%;
+            }
+            @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+            {
+                height: 40%;
+            }
+            @media screen and (max-width: map-get($breakpoint, small))
+            {
+                margin-top: 60px;
+                height: 70%;
+            }
+
+            #QuestionMark {
+                transform: translate(540.317px, 350.604px);
+                animation: upQuestion 6s ease-in-out infinite;
+
+                @keyframes upQuestion {
+                    0%  {
+                        transform: translate(540.317px, 350.604px);
+                    }
+                    50% {
+                        transform: translate(540.317px, 320.604px);
+                    }
+                    100%  {
+                        transform: translate(540.317px, 350.604px);
+                    }
+                }
+            }
+
+            #Top {
+                animation: upTop 12s ease-in-out infinite;
+
+                @keyframes upTop {
+                    0%  {
+                        transform: translateY(0%);
+                    }
+                    50% {
+                        transform: translateY(-4%);
+                    }
+                    100%  {
+                        transform: translateY(0%);
+                    }
+                }
+            }
+            
+            #Bottom {
+                animation: upBottom 12s ease-in-out infinite;
+
+                @keyframes upBottom {
+                    0%  {
+                        transform: translateY(0%);
+                    }
+                    50% {
+                        transform: translateY(3%);
+                    }
+                    100%  {
+                        transform: translateY(0%);
+                    }
+                }
+            }
+
+            #Right {
+                animation: upRight 12s ease-in-out infinite;
+
+                @keyframes upRight {
+                    0%  {
+                        transform: translateX(0%);
+                    }
+                    50% {
+                        transform: translateX(6%);
+                    }
+                    100%  {
+                        transform: translateX(0%);
+                    }
+                }
+            }
+
+            #Middle {
+                animation: upMiddle 12s ease-in-out infinite;
+                transform-origin: center;
+
+                @keyframes upMiddle {
+                    0%  {
+                        transform: scale(1);
+                    }
+                    50% {
+                        transform: scale(1.2);
+                    }
+                    100%  {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,328 @@
+@import "../../global.scss";
+
+.finance {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: map-get($breakpoint, xlarge)) 
+    {
+        flex-direction: column-reverse;
+    }
+    @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+    {
+        height: 200vh;
+    }
+
+    .right {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            width: 100%;
+            height: 50%;
+            align-items: center;
+        }
+
+        svg {
+            width: 68%;
+
+            @media screen and (max-width: map-get($breakpoint, xxxlarge)) 
+            {
+                width: 90%;
+            }
+            @media screen and (max-width: map-get($breakpoint, xlarge)) 
+            {
+                width: 80%;
+            }
+
+            #_2000 {
+                transform: translate(255.583px, 174.339px);
+                animation: _2000Down 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes _2000Down {
+                    0%,10%  {
+                        transform: translate(235.583px, 174.339px);
+                        opacity: 0;
+                    }
+                    15%,85% {
+                        transform: translate(255.583px, 174.339px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(255.583px, 174.339px);
+                        opacity: 0;
+                    }
+                }
+            }
+            #_1500 {
+                transform: translate(255.583px, 250.297px);
+                animation: _1500Down 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes _1500Down {
+                    0%,15%  {
+                        transform: translate(235.583px, 250.297px);
+                        opacity: 0;
+                    }
+                    20%,85% {
+                        transform: translate(255.583px, 250.297px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(255.583px, 250.297px);
+                        opacity: 0;
+                    }
+                }
+            }
+            #_1000 {
+                transform: translate(255.583px, 325.487px);
+                animation: _1000Down 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes _1000Down {
+                    0%,20%  {
+                        transform: translate(235.583px, 325.487px);
+                        opacity: 0;
+                    }
+                    25%,85% {
+                        transform: translate(255.583px, 325.487px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(255.583px, 325.487px);
+                        opacity: 0;
+                    }
+                }
+            }
+            #_500 {
+                transform: translate(255.583px, 400.421px);
+                animation: _500Down 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes _500Down {
+                    0%,25%  {
+                        transform: translate(235.583px, 400.421px);
+                        opacity: 0;
+                    }
+                    30%,85% {
+                        transform: translate(255.583px, 400.421px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(255.583px, 400.421px);
+                        opacity: 0;
+                    }
+                }
+            }
+            #_0 {
+                transform: translate(255.583px, 475.26px);
+                animation: _0Down 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes _0Down {
+                    0%,30%  {
+                        transform: translate(235.583px, 475.26px);
+                        opacity: 0;
+                    }
+                    35%,85% {
+                        transform: translate(255.583px, 475.26px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(255.583px, 475.26px);
+                        opacity: 0;
+                    }
+                }
+            }
+            #RedLine {
+                transform: translate(314.975px, 212.074px);
+                animation: RedLineDown 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes RedLineDown {
+                    0%,40%  {
+                        transform: translate(314.975px, 172.074px);
+                        opacity: 0;
+                    }
+                    45%,85% {
+                        transform: translate(314.975px, 212.074px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(314.975px, 212.074px);
+                        opacity: 0;
+                    }
+                }
+            }
+            #GreenLine {
+                transform: translate(301.707px, 238.477px);
+                animation: GreenLineDown 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes GreenLineDown {
+                    0%,45%  {
+                        transform: translate(301.707px, 198.477px);
+                        opacity: 0;
+                    }
+                    50%,85% {
+                        transform: translate(301.707px, 238.477px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(301.707px, 238.477px);
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .left {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            width: 100%;
+            height: 50%;
+            align-items: center;
+            justify-content: center;
+        }
+        @media screen and (max-width: map-get($breakpoint, medium)) 
+        {
+            justify-content: flex-start;
+        }
+        
+        .container {
+            width: 50%;
+            margin-right: 120px;
+
+            @media screen and (max-width: map-get($breakpoint, xxxlarge)) 
+            {
+                width: 90%;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+            @media screen and (max-width: map-get($breakpoint, xlarge)) 
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            h1 {
+                font-size: 50px;
+                font-weight: 700;
+                color: $mainFontColor;
+                margin-bottom: 20px;
+
+                @media screen and (max-width: map-get($breakpoint, xlarge)) 
+                {
+                    text-align: center;
+                }
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    font-size: 28px;
+                }
+                @media screen and (max-width: map-get($breakpoint, small))
+                {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                span {
+                    color: $green;
+                    text-decoration: underline;
+                }
+            }
+            
+            p {
+                font-size: 20px;
+                font-weight: 400;
+                color: $mainFontColor;
+                line-height: 30px;
+                margin-bottom: 40px;
+
+                @media screen and (max-width: map-get($breakpoint, xlarge)) 
+                {
+                    text-align: center;
+                }
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                @media screen and (max-width: map-get($breakpoint, small))
+                {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+
+            .wrapper {
+                display: flex;
+
+                a {
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: $green;
+
+                    @media screen and (max-width: map-get($breakpoint, medium)) 
+                    {
+                        font-size: 16px;
+                    }
+
+                    .button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: solid 2px $green;
+                        border-radius: 10px;
+                        width: 150px;
+                        height: 50px;
+                        transition: all .3s ease-in-out;
+                        cursor: pointer;
+
+                        @media screen and (max-width: map-get($breakpoint, medium)) 
+                        {
+                            width: 130px;
+                            height: 40px;
+                        }
+
+                        &:hover {
+                            background-color: $green;
+                            color: $bgColor;
+                        }
+                    }
+                    #signUpButton {
+                        margin-right: 10px;
+                        background-color: $green;
+                        color: $bgColor;
+    
+                        &:hover {
+                            background-color: $bgColor;
+                            color: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,198 @@
+@import "../../global.scss";
+
+.productMenu {
+    width: 500px;
+    height: 300px;
+    background-color: transparent;
+    position: absolute;
+    top: 80px;
+    left: -500px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    z-index: 3;
+
+    &.active {
+        position: absolute;
+        left: 0px;
+        opacity: 1;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .observer {
+            width: 100%;
+            height: 150px;
+            background: $purple;
+            background: linear-gradient(-45deg, $purple, $darkBlue, $purple, $darkBlue);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+            .link {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                .left {
+                    height: 100%;
+                    width: 60%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    img {
+                        height: 30%;
+                        margin-left: 30px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        color: white;
+                        font-size: 16px;
+                        margin-left: 30px;
+                        font-weight: 400;
+                        line-height: 22px;
+                    }
+                }
+
+                .right {
+                    height: 100%;
+                    width: 40%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    img {
+                        height: 40%;
+                        margin-right: 30px;
+                    }
+                }
+
+                &:hover .right img {
+                    animation: arrowJiggle .5s ease infinite;
+
+                    @keyframes arrowJiggle {
+                        0% {
+                            transform: translateX(0%);
+                        }
+                        50% {
+                            transform: translateX(15%);
+                        }
+                        100% {
+                            transform: translateX(0%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .spyGlass {
+            width: 100%;
+            height: 150px;
+            background: $orange;
+            background: linear-gradient(-45deg, $orange, $pink, $orange, $pink);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-bottom-right-radius: 25px;
+
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+            
+            .link {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                .left {
+                    height: 100%;
+                    width: 60%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    h1 {
+                        color: white;
+                        font-size: 34px;
+                        margin-left: 30px;
+                        font-weight: 700;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        color: white;
+                        font-size: 16px;
+                        margin-left: 30px;
+                        font-weight: 400;
+                        line-height: 22px;
+                    }
+                }
+
+                .right {
+                    height: 100%;
+                    width: 40%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    img {
+                        height: 40%;
+                        margin-right: 30px;
+                    }
+                }
+
+                &:hover .right img {
+                    animation: arrowJiggle .5s ease infinite;
+
+                    @keyframes arrowJiggle {
+                        0% {
+                            transform: translateX(0%);
+                        }
+                        50% {
+                            transform: translateX(15%);
+                        }
+                        100% {
+                            transform: translateX(0%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

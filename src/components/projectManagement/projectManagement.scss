@@ -1,0 +1,348 @@
+@import "../../global.scss";
+
+.projectManagement {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: map-get($breakpoint, xlarge)) 
+    {
+        flex-direction: column;
+    }
+    @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+    {
+        height: 200vh;
+    }
+
+    .left {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            width: 100%;
+            height: 50%;
+            align-items: center;
+        }
+
+        svg {
+            width: 68%;
+
+            @media screen and (max-width: map-get($breakpoint, xxxlarge)) 
+            {
+                width: 90%;
+            }
+            @media screen and (max-width: map-get($breakpoint, xlarge)) 
+            {
+                width: 80%;
+            }
+
+            #box1 {
+                transform: translate(230.537px, 60.471px);
+                animation: box1Down 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes box1Down {
+                    0%,10%  {
+                        transform: translate(230.537px, 0.471px);
+                        opacity: 0;
+                    }
+                    15%,85% {
+                        transform: translate(230.537px, 60.471px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(230.537px, 120.471px);
+                        opacity: 0;
+                    }
+                }
+            }
+            #Ellipse_43 {
+                animation: box1Green 8s ease-in-out infinite;
+                fill:#c0cbdc;
+                opacity: 1;
+
+                @keyframes box1Green {
+                    0%,35%  {
+                        fill:#c0cbdc;
+                        opacity: 1;
+                    }
+                    40%,85% {
+                        fill:$green;
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        fill:#c0cbdc;
+                        opacity: 0;
+                    }
+                }
+            }
+            #box2 {
+                transform: translate(230.537px, 170.379px);
+                animation: box2Down 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes box2Down {
+                    0%,15%  {
+                        transform: translate(230.537px, 110.379px);
+                        opacity: 0;
+                    }
+                    20%,85% {
+                        transform: translate(230.537px, 170.379px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(230.537px, 230.379px);
+                        opacity: 0;
+                    }
+                }
+            }
+            #Ellipse_42 {
+                animation: box2Green 8s ease-in-out infinite;
+                fill:#c0cbdc;
+                opacity: 1;
+
+                @keyframes box2Green {
+                    0%,40%  {
+                        fill:#c0cbdc;
+                        opacity: 1;
+                    }
+                    45%,85% {
+                        fill:$green;
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        fill:#c0cbdc;
+                        opacity: 0;
+                    }
+                }
+            }
+            #box3 {
+                transform: translate(230.959px, 281.347px);
+                animation: box3Down 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes box3Down {
+                    0%,20%  {
+                        transform: translate(230.959px, 221.347px);
+                        opacity: 0;
+                    }
+                    25%,85% {
+                        transform: translate(230.959px, 281.347px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(230.959px, 341.347px);
+                        opacity: 0;
+                    }
+                }
+            }
+            #Ellipse_41 {
+                animation: box3Green 8s ease-in-out infinite;
+                fill:#c0cbdc;
+                opacity: 1;
+
+                @keyframes box3Green {
+                    0%,45%  {
+                        fill:#c0cbdc;
+                        opacity: 1;
+                    }
+                    50%,85% {
+                        fill:$green;
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        fill:#c0cbdc;
+                        opacity: 0;
+                    }
+                }
+            }
+            #box4 {
+                transform: translate(230.959px, 392.117px);
+                animation: box4Down 8s ease-in-out infinite;
+                opacity: 0;
+
+                @keyframes box4Down {
+                    0%,25%  {
+                        transform: translate(230.959px, 332.117px);
+                        opacity: 0;
+                    }
+                    30%,85% {
+                        transform: translate(230.959px, 392.117px);
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        transform: translate(230.959px, 452.117px);
+                        opacity: 0;
+                    }
+                }
+            }
+            #Ellipse_40 {
+                animation: box4Green 8s ease-in-out infinite;
+                fill:#c0cbdc;
+                opacity: 1;
+
+                @keyframes box4Green {
+                    0%,50%  {
+                        fill:#c0cbdc;
+                        opacity: 1;
+                    }
+                    55%,85% {
+                        fill:$green;
+                        opacity: 1;
+                    }
+                    90%,100% {
+                        fill:#c0cbdc;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            width: 100%;
+            height: 50%;
+            align-items: center;
+            justify-content: center;
+        }
+        @media screen and (max-width: map-get($breakpoint, medium)) 
+        {
+            justify-content: flex-start;
+        }
+        
+        .container {
+            width: 50%;
+            margin-left: 120px;
+
+            @media screen and (max-width: map-get($breakpoint, xxxlarge)) 
+            {
+                width: 90%;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+            @media screen and (max-width: map-get($breakpoint, xlarge)) 
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            h1 {
+                font-size: 50px;
+                font-weight: 700;
+                color: $mainFontColor;
+                margin-bottom: 20px;
+
+                @media screen and (max-width: map-get($breakpoint, xlarge)) 
+                {
+                    text-align: center;
+                }
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    font-size: 28px;
+                }
+                @media screen and (max-width: map-get($breakpoint, small))
+                {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                span {
+                    color: $blue;
+                    text-decoration: underline;
+                }
+            }
+            
+            p {
+                font-size: 20px;
+                font-weight: 400;
+                color: $mainFontColor;
+                line-height: 30px;
+                margin-bottom: 40px;
+
+                @media screen and (max-width: map-get($breakpoint, xlarge)) 
+                {
+                    text-align: center;
+                }
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                @media screen and (max-width: map-get($breakpoint, small))
+                {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+
+            .wrapper {
+                display: flex;
+
+                a {
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: $blue;
+
+                    @media screen and (max-width: map-get($breakpoint, medium)) 
+                    {
+                        font-size: 16px;
+                    }
+
+                    .button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: solid 2px $blue;
+                        border-radius: 10px;
+                        width: 150px;
+                        height: 50px;
+                        transition: all .3s ease-in-out;
+                        cursor: pointer;
+
+                        @media screen and (max-width: map-get($breakpoint, medium)) 
+                        {
+                            width: 130px;
+                            height: 40px;
+                        }
+
+                        &:hover {
+                            background-color: $blue;
+                            color: $bgColor;
+                        }
+                    }
+                    #signUpButton {
+                        margin-right: 10px;
+                        background-color: $blue;
+                        color: $bgColor;
+    
+                        &:hover {
+                            background-color: $bgColor;
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="performanceLogo" transform="translate(-1212 -2593)">
+    <circle id="Ellipse_10" data-name="Ellipse 10" cx="30" cy="30" r="30" transform="translate(1212 2593)" fill="#63c74d" opacity="0.2"/>
+    <path id="Polygon_4" data-name="Polygon 4" d="M5,0l5,25.361H0Z" transform="matrix(0.966, 0.259, -0.259, 0.966, 1243.448, 2610)" fill="#63c74d"/>
+    <ellipse id="Ellipse_50" data-name="Ellipse 50" cx="15" cy="7" rx="15" ry="7" transform="translate(1227 2630)" fill="#63c74d"/>
+    <circle id="Ellipse_51" data-name="Ellipse 51" cx="2.5" cy="2.5" r="2.5" transform="translate(1240 2598)" fill="#3e8948"/>
+    <circle id="Ellipse_52" data-name="Ellipse 52" cx="2.5" cy="2.5" r="2.5" transform="translate(1217 2621)" fill="#3e8948"/>
+    <circle id="Ellipse_53" data-name="Ellipse 53" cx="2.5" cy="2.5" r="2.5" transform="translate(1262 2621)" fill="#3e8948"/>
+    <circle id="Ellipse_54" data-name="Ellipse 54" cx="2.5" cy="2.5" r="2.5" transform="translate(1224 2605)" fill="#3e8948"/>
+    <circle id="Ellipse_55" data-name="Ellipse 55" cx="2.5" cy="2.5" r="2.5" transform="translate(1256 2605)" fill="#3e8948"/>
+  </g>
+</svg>

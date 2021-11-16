@@ -1,0 +1,308 @@
+@import "../../global.scss";
+
+.details {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: map-get($breakpoint, xlarge)) 
+    {
+        max-height: 300vh;
+    }
+    @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+    {
+        max-height: 600vh;
+    }
+
+    .container {
+        width: 70%;
+        height: 45vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        @media screen and (max-width: map-get($breakpoint, xxxlarge)) 
+        {
+            width: 90%;
+        }
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+        {
+            height: 100vh;
+        }
+        @media screen and (max-width: map-get($breakpoint, medium)) 
+        {
+            height: 40vh;
+        }
+    
+        .header {
+            width: 50%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, .8);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+            margin-left: 20px;
+            margin-bottom: 40px;
+
+            @media screen and (max-width: map-get($breakpoint, xlarge)) 
+            {
+                width: 90%;
+                height: 50%;
+                margin-left: 0px;
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
+            @media screen and (max-width: map-get($breakpoint, medium)) 
+            {
+                background-color: transparent;
+                box-shadow: unset;
+                width: 100%;
+                height: unset;
+            }
+
+            img {
+                position: unset;
+                margin-right: 30px;
+
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    display: none;
+                }
+            }
+
+            h1 {
+                width: 70%;
+                font-size: 40px;
+                color: $mainFontColor;
+
+                @media screen and (max-width: map-get($breakpoint, xlarge)) 
+                {
+                    font-size: 36px;
+                }
+
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 28px;
+                }
+                @media screen and (max-width: map-get($breakpoint, small))
+                {
+                    font-size: 20px;
+                }
+            }
+        }
+        .text {
+            width: 50%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 40px;
+
+            @media screen and (max-width: map-get($breakpoint, xlarge)) 
+            {
+                height: 40%;
+                width: 90%;
+                justify-content: center;
+                margin-bottom: 0;
+            }
+            @media screen and (max-width: map-get($breakpoint, medium)) 
+            {
+                width: 100%;
+            }
+
+            p {
+                width: 70%;
+                font-size: 20px;
+                line-height: 30px;
+                color: $mainFontColor;
+                margin-right: 40px;
+
+                @media screen and (max-width: map-get($breakpoint, xlarge)) 
+                {
+                    width: 100%;
+                    margin-right: 0;
+                    text-align: center;
+                }
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                @media screen and (max-width: map-get($breakpoint, small))
+                {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .buttons {
+        width: 70%;
+        height: 10vh;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        @media screen and (max-width: map-get($breakpoint, xxxlarge)) 
+        {
+            width: 90%;
+        }
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            width: 90%;
+            align-items: center;
+        }
+        @media screen and (max-height: map-get($breakpoint, medium)) and (orientation: landscape)
+        {
+            height: 40vh;
+        }
+        @media screen and (max-width: map-get($breakpoint, medium)) 
+        {
+            height: 15vh;
+        }
+
+        .signUp {
+            margin-left: 20px;
+            font-size: 20px;
+            text-decoration: none;
+            color: $blue;
+
+            @media screen and (max-width: map-get($breakpoint, medium)) 
+            {
+                font-size: 16px;
+            }
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: solid 2px $blue;
+                border-radius: 10px;
+                width: 150px;
+                height: 50px;
+                transition: all .3s ease-in-out;
+                cursor: pointer;
+                background-color: $blue;
+                color: $bgColor;
+
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    width: 130px;
+                    height: 40px;
+                }
+
+                &:hover {
+                    background-color: $bgColor;
+                    color: $blue;
+                }
+            }
+        }
+
+        p {
+            margin-left: 20px;
+            margin-top: 10px;
+            color: $secondaryFontColor;
+
+            @media screen and (max-width: map-get($breakpoint, medium)) 
+            {
+                font-size: 14px;
+            }
+
+            a {
+                text-decoration: underline;
+                color: $blue;
+            }
+        }
+    }
+
+    .squares {
+        max-height: 300vh;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media screen and (max-width: map-get($breakpoint, xxxlarge)) 
+        {
+            width: 90%;
+        }
+        @media screen and (max-width: map-get($breakpoint, xlarge)) 
+        {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .square {
+            height: 260px;
+            width: 400px;
+            background-color: rgba(255, 255, 255, .8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (max-width: map-get($breakpoint, xlarge)) 
+            {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            @media screen and (max-width: map-get($breakpoint, medium)) 
+            {
+                height: 200px;
+            }
+
+            img {
+                position: unset;
+                height: 50px;
+                display: flex;
+                align-self: flex-start;
+                margin-left: 20px;
+
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    margin-left: 0;
+                   
+                    align-self: center;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                color: $mainFontColor;
+                margin: 20px;
+                line-height: 30px;
+
+                @media screen and (max-width: map-get($breakpoint, medium)) 
+                {
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin: 10px;
+                    text-align: center;
+                }
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
